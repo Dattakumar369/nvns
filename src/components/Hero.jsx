@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
 const Hero = () => {
+  const withBase = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
   const images = [
-    { src: '/devops.png', alt: 'DevOps Technology' },
-    { src: '/aws.png', alt: 'AWS Cloud Technology' }
+    { src: withBase('/devops.png'), alt: 'DevOps Technology' },
+    { src: withBase('/aws.png'), alt: 'AWS Cloud Technology' }
   ]
 
   const [currentIndex, setCurrentIndex] = useState(0)
