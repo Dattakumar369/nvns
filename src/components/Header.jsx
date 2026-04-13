@@ -8,6 +8,7 @@ const Header = () => {
   const location = useLocation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState(null)
+  const logoSrc = `${import.meta.env.BASE_URL}nvns.png`
 
   const isActive = (path) => {
     if (path === '/' && location.pathname === '/') return true
@@ -88,7 +89,7 @@ const Header = () => {
                 className="flex items-center gap-2 hover:opacity-80 transition-opacity"
               >
                 <img 
-                  src="/nvns.png" 
+                  src={logoSrc} 
                   alt="NVNS Software Solutions Logo" 
                   className="h-7 sm:h-8 md:h-9 w-auto object-contain"
                 />

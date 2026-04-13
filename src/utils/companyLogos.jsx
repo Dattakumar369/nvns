@@ -1,22 +1,24 @@
 import { Building2 } from 'lucide-react'
 
+const withBase = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
+
 // Map company names to their logo paths
 const companyLogoMap = {
-  'TCS': '/logos/tcs.png',
-  'Infosys': '/logos/infosys.png',
-  'Wipro': '/logos/wipro.png',
-  'Accenture': '/logos/accenture.png',
-  'Cognizant': '/logos/cognizant.png',
-  'HCL': '/logos/hcl.png',
-  'Capgemini': '/logos/capgemini.png',
-  'Tech Mahindra': '/logos/tech-mahindra.png',
-  'LTI': '/logos/lti.png',
-  'IBM': '/logos/ibm.png',
-  'Microsoft': '/logos/microsoft.jpg',
-  'Amazon': '/logos/amazon.png',
-  'Oracle': '/logos/oracle.png',
-  'Dell': '/logos/dell.png',
-  'Cisco': '/logos/cisco.png',
+  'TCS': withBase('/logos/tcs.png'),
+  'Infosys': withBase('/logos/infosys.png'),
+  'Wipro': withBase('/logos/wipro.png'),
+  'Accenture': withBase('/logos/accenture.png'),
+  'Cognizant': withBase('/logos/cognizant.png'),
+  'HCL': withBase('/logos/hcl.png'),
+  'Capgemini': withBase('/logos/capgemini.png'),
+  'Tech Mahindra': withBase('/logos/tech-mahindra.png'),
+  'LTI': withBase('/logos/lti.png'),
+  'IBM': withBase('/logos/ibm.png'),
+  'Microsoft': withBase('/logos/microsoft.jpg'),
+  'Amazon': withBase('/logos/amazon.png'),
+  'Oracle': withBase('/logos/oracle.png'),
+  'Dell': withBase('/logos/dell.png'),
+  'Cisco': withBase('/logos/cisco.png'),
 }
 
 /**

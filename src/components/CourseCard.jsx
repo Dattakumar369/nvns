@@ -6,12 +6,13 @@ import EnrollmentForm from './EnrollmentForm'
 const CourseCard = ({ course, showBatchInfo = false }) => {
   const navigate = useNavigate()
   const [showEnrollmentForm, setShowEnrollmentForm] = useState(false)
+  const withBase = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
 
   // Get course image path: use explicit course.image if provided, otherwise derive from slug/id
   const getCourseImageSrc = () => {
-    if (course.image) return course.image
-    if (course.slug) return `/courses/${course.slug}.png`
-    if (course.id) return `/courses/${course.id}.png`
+    if (course.image) return withBase(course.image)
+    if (course.slug) return withBase(`/courses/${course.slug}.png`)
+    if (course.id) return withBase(`/courses/${course.id}.png`)
     return null
   }
 
